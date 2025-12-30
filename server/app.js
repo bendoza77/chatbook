@@ -8,6 +8,7 @@ const commentRouter = require("./routers/comment.router");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const userRouter = require("./routers/user.router");
+const path = require("path")
 
 require("dotenv").config();
 
