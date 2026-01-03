@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { usePost } from "../context/PostContext";
+import { useLocation } from "react-router-dom";
 
 const Post = ({el}) => {
 
     const [toggle, setToggle] = useState(false);
     const { updatePost } = usePost();
+    const location = useLocation();
 
     const handleSubmit = (e, postId) => {
         e.preventDefault();
@@ -41,7 +43,7 @@ const Post = ({el}) => {
                                 <p>likes</p>
                                 <p>${el.likeCount}</p>
                             </div>
-                            {!toggle  && <button onClick={() => setToggle(!toggle)}>Update post</button>}
+                            {(!toggle && location.pathname === "/profile")  && <button onClick={() => setToggle(!toggle)}>Update post</button>}
                         </div> 
                     </>
                 )

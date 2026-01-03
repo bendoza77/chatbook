@@ -80,8 +80,6 @@ const AuthProvider = ({children}) => {
                 credentials: "include"
             });
             const result = await request.json();
-
-            console.log(result);
             console.log(result);
 
             if (!request.ok) {
