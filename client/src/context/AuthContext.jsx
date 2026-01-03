@@ -7,7 +7,7 @@ const AuthContext = createContext();
 
 const useAuth = () => useContext(AuthContext);
 
-const API_URL = "http://localhost:3000"
+const API_URL = import.meta.env.VITE_CLIENT_URL
 
 const AuthProvider = ({children}) => {
 
@@ -80,6 +80,8 @@ const AuthProvider = ({children}) => {
                 credentials: "include"
             });
             const result = await request.json();
+
+            console.log(result);
             console.log(result);
 
             if (!request.ok) {
