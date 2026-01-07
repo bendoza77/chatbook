@@ -14,9 +14,10 @@ const postSchema = new mongoose.Schema(
 
         profileImage: String,
 
+        postImg: String,
+
         title: {
             type: String,
-            unique: [true, "title must be unique"],
             required: [true, "title is required"]
         },
         content: {

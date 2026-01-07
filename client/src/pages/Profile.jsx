@@ -15,14 +15,14 @@ const Profile = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const { postTitle, postDes } = e.target
 
-        const obj = {
-            title: postTitle.value,
-            content: postDes.value
-        }
+        const formData = new FormData();
+        formData.append("title", e.target.postTitle.value);
+        formData.append("content", e.target.postDes.value);
+        formData.append("postImg", e.target.postImg.files[0]);
 
-        createPost(obj);
+
+        createPost(formData);
         e.target.reset();
 
     }
@@ -35,9 +35,10 @@ const Profile = () => {
                 <p>Email: {user.email}</p>
                 <p>Verified: {user.isVerified ? "Yes" : "No"}</p>
 
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} encType="multipart/form-data">
                     <input type="text" name="postTitle" placeholder="Post Title" />
                     <input type="text" name="postDes" placeholder="Post Description" />
+                    <input type="file" name="postImg" />
                     <button>Create Post</button>
                 </form>
 

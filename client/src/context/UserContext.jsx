@@ -4,7 +4,8 @@ const UserContext = createContext();
 
 const useUser = () => useContext(UserContext);
 
-const API_URL = import.meta.env.VITE_CLIENT_URL
+const API_URL = "http://localhost:3000"
+
 
 const UserProvider = ({children}) => {
 

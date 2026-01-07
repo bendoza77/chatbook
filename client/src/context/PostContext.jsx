@@ -4,7 +4,8 @@ const PostContext = createContext();
 
 const usePost = () => useContext(PostContext);
 
-const API_URL = import.meta.env.VITE_CLIENT_URL
+const API_URL = "http://localhost:3000"
+
 
 const PostProvider = ({children}) => {
 
@@ -88,14 +89,12 @@ const PostProvider = ({children}) => {
 
             const request = await fetch(`${API_URL}/posts/`, {
                 method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(postObj),
+                body: postObj,
                 credentials: "include"
             })
 
             const result = await request.json();
+            console.log(result);
             setPosts(prev => {
                 return [...prev, result];
             })

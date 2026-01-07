@@ -20,12 +20,13 @@ if (process.env.NODE_ENV === "development") {
 }
 
 app.use(cors({
-  origin: process.env.CLIENT_URL,
+  origin: "http://localhost:5173",
   methods: ["GET", "POST", "DELETE", "PATCH"],
   credentials: true
 }));
 
 app.use(express.static(path.join(__dirname, "dist")));
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 app.use(cookieParser());
 app.use(express.json());

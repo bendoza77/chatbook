@@ -39,6 +39,7 @@ const Post = ({el}) => {
                                 <h1>{el.title}</h1>
                             </div>
                             <p className="content">{el.content}</p>
+                            <img style={{width: "100%"}} src={"http://localhost:3000/uploads/" + el.postImg} alt="" />
                             <div className="like">
                                 <p>likes</p>
                                 <p>${el.likeCount}</p>

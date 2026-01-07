@@ -102,6 +102,7 @@ const getPost = catchAsync(async (req, res, next) => {
 const createPost = catchAsync(async (req, res, next) => {
 
     const { title, content, tags, userId, fullName } = req.body;
+    const { file } = req
 
     if (!title || !content) {
         next(new AppError("all field is required", 400));
@@ -113,7 +114,8 @@ const createPost = catchAsync(async (req, res, next) => {
         title,
         content,
         likeCount: 0,
-        tags
+        tags,
+        postImg: file ? file.filename : null
     });
 
     const updateUser = await User.findByIdAndUpdate(req.user._id, {$push: {postId: newPost._id}});
