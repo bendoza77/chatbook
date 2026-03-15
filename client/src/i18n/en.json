@@ -1,0 +1,68 @@
+{
+  "nav": {
+    "home": "Home",
+    "login": "Login",
+    "signup": "Sign Up",
+    "profile": "Profile",
+    "posts": "Posts",
+    "users": "Users",
+    "logout": "Logout"
+  },
+  "home": {
+    "welcome": "Welcome to ChatBook",
+    "subtitle": "Connect, chat, and collaborate with friends",
+    "chat": "Real-time Chat",
+    "chatDesc": "Instant messaging with friends and groups",
+    "groups": "Group Chats",
+    "groupsDesc": "Create and manage group conversations",
+    "secure": "Secure & Private",
+    "secureDesc": "End-to-end encryption for all messages"
+  },
+  "login": {
+    "title": "Welcome Back",
+    "subtitle": "Sign in to your account",
+    "emailPlaceholder": "Enter Your Email",
+    "passwordPlaceholder": "Enter Your Password",
+    "submit": "Sign In",
+    "noAccount": "Don't have an account?",
+    "signupLink": "Sign up"
+  },
+  "signup": {
+    "title": "Sign Up",
+    "namePlaceholder": "Enter Your Name",
+    "emailPlaceholder": "Enter Your Email",
+    "passwordPlaceholder": "Enter Your Password",
+    "submit": "Submit"
+  },
+  "profile": {
+    "title": "Profile",
+    "name": "Name",
+    "email": "Email",
+    "verified": "Verified",
+    "yes": "Yes",
+    "no": "No",
+    "createPost": "Create Post",
+    "postTitle": "Post Title",
+    "postDescription": "Post Description",
+    "deletePost": "Delete post",
+    "updatePost": "Update post"
+  },
+  "posts": {
+    "title": "The Posts",
+    "likes": "Likes",
+    "changeTitle": "Change Title",
+    "content": "Content",
+    "submit": "Submit",
+    "cancel": "Cancel"
+  },
+  "users": {
+    "title": "Search Users",
+    "searchPlaceholder": "Search user name",
+    "subtitle": "Users",
+    "name": "Name",
+    "email": "Email",
+    "status": "Status",
+    "verified": "Verified",
+    "notVerified": "Not Verified"
+  }
+}
